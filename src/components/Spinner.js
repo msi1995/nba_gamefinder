@@ -1,6 +1,8 @@
 import React from 'react';
 import './spinner.css';
 
+//credit to https://projects.lukehaas.me/css-loaders/
+
 export default function Spinner(){
 
     return(

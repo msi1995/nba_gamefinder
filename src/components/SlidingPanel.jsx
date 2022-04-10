@@ -10,7 +10,6 @@ export default function SlidePanel({ isOpen, team, setActive }) {
   const [gameData, loading] = FetchGames(team[0]);
 
   const [openPanel, setOpenPanel] = useState();
-  console.log("gamedata for g1", gameData[0]);
   useEffect(() => {
     setOpenPanel(isOpen);
   }, [team]);
