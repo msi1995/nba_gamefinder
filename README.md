@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/63132397/162613244-21e5bc40-706e-48d1-a3d1-bd710df41a18.png)
+![image](https://user-images.githubusercontent.com/63132397/162613296-740da611-d5e6-452c-84b3-153020f28957.png)
 
 
 # Alkira Takehome
