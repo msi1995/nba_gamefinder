@@ -9,7 +9,7 @@ export default function Search() {
   const [panelTeam, setPanelTeam] = useState([]);
   const [active, setActive] = useState();
   const teamData = FetchTeams();
-  const gameData = FetchGames();
+  // const gameData = FetchGames();
 
   return (
     <div>
@@ -22,10 +22,9 @@ export default function Search() {
         setActive={setActive}
       />
       <SlidePanel 
-      gamedata={gameData} 
+      // gamedata={gameData} 
       isOpen={openPanel} 
       team={panelTeam}
-      active={active}
       setActive={setActive}
       />
     </div>
