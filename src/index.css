@@ -24,6 +24,12 @@ h1 {
   padding-bottom: 20px;
 }
 
+@media screen and (max-width: 500px) {
+  .content-c{
+    width: 90% !important;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
