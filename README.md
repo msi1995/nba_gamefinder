@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/63132397/162613244-21e5bc40-706e-48d1-a3d1-bd710df41a18.png)
+
+
 # Alkira Takehome
 
 To the devs at Alkira who review my implementation, thank you for the opportunity. I included just a few comments in areas of the code that I know may have room for improvement, but I did not want to spend an unrealistic amount of time on the takehome.
