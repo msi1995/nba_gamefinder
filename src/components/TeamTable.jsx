@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import "./teamtable.css";
 import "./search.css"
-export default function TeamTable({ tabledata }) {
+export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam }) {
 
   const [inputQuery, setInputQuery] = useState("");
   const [readyData, setReadyData] = useState(tabledata);
@@ -17,6 +17,12 @@ export default function TeamTable({ tabledata }) {
   useEffect(() => {
     setReadyData(tabledata);
   }, [tabledata]);
+
+  function HandlePanel(toggle, id, fullname, name){
+      setOpenPanel(toggle)
+      setPanelTeam([id,fullname,name])
+  }
+
 
   // Sorting functions for table. I tried to use string interpolation to pass an argument to this function, so I could do something like
   // a.passedArgument to only have one function, but accessing children with string interpolation doesn't seem to work out of the box.
@@ -100,7 +106,7 @@ export default function TeamTable({ tabledata }) {
                   //make a handle click that adds a class to it for highlighting, and opens a modal somehow
                   // pass the team name to the modal, use a hook inside the modal to do second api call
                   // to the games endpoint and then filter it by the team name
-                <tr onClick={() => console.log(row.name)}className="table-inf">
+                <tr onClick={() => HandlePanel(true, row.id, row.full_name, row.name)} className="table-inf">
                   <td>{row.name}</td>
                   <td>{row.city}</td>
                   <td>{row.abbreviation}</td>
