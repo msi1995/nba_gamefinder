@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/63132397/162613296-740da611-d5e6-452c-84b3-153020f28957.png)
 
 
-# Alkira Takehome
+# Alkira UI Engineer Takehome
 
 To the devs at Alkira who review my implementation, thank you for the opportunity. I included just a few comments in areas of the code that I know may have room for improvement, but I did not want to spend an unrealistic amount of time on the takehome.
 
