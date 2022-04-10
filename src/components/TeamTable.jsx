@@ -23,6 +23,10 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
     setPanelTeam([id, name, fullname]);
   }
 
+
+  // I was having a problem with using a boolean for this causing all rows to be active, since it's called from a .map() function.
+  // By passing the ID of the calling function, I can then set the active row by comparing the row's ID during the map with the
+  // ID in the active state.
   function toggleRowClass(id){
     setActive(id)
   }
