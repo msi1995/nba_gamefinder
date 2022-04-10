@@ -3,9 +3,8 @@ import doSearch from "../hooks/DoSearch";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import "./teamtable.css";
-import "./search.css"
-export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam }) {
-
+import "./search.css";
+export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, active, setActive }) {
   const [inputQuery, setInputQuery] = useState("");
   const [readyData, setReadyData] = useState(tabledata);
   const [teamSorted, setTeamSorted] = useState(true);
@@ -18,61 +17,75 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam }) {
     setReadyData(tabledata);
   }, [tabledata]);
 
-  function HandlePanel(toggle, id, fullname, name){
-      setOpenPanel(toggle)
-      setPanelTeam([id,fullname,name])
+  function HandlePanel(toggle, id, name, fullname) {
+    setOpenPanel(toggle);
+    toggleRowClass(id)
+    setPanelTeam([id, name, fullname]);
   }
 
+  function toggleRowClass(id){
+    setActive(id)
+  }
 
   // Sorting functions for table. I tried to use string interpolation to pass an argument to this function, so I could do something like
-  // a.passedArgument to only have one function, but accessing children with string interpolation doesn't seem to work out of the box.
+  // a.arg to only have one function, but accessing children with string interpolation doesn't seem to work out of the box.
   // I could do this a better way than repeating the functions if I spent more time, most likely.
   function TeamSort() {
-    tabledata = readyData
+    tabledata = readyData;
     setTeamSorted(!teamSorted);
-     if (teamSorted == true)
-         tabledata.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name)) ? -1 : 0)
-     else 
-         tabledata.reverse()
+    if (teamSorted == true)
+      tabledata.sort((a, b) =>
+        a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
+    else
+      tabledata.sort((a, b) =>
+        a.name < b.name ? 1 : b.name < a.name ? -1 : 0);
   }
 
   function CitySort() {
-    tabledata = readyData
+    tabledata = readyData;
     setCitySorted(!citySorted);
-     if (citySorted == true)
-         tabledata.sort((a,b) => (a.city > b.city) ? 1 : ((b.city > a.city)) ? -1 : 0)
-     else 
-         tabledata.reverse()
+    if (citySorted == true)
+      tabledata.sort((a, b) =>
+        a.city > b.city ? 1 : b.city > a.city ? -1 : 0
+      );
+    else
+    tabledata.sort((a, b) =>
+        a.city < b.city ? 1 : b.city < a.city ? -1 : 0
+      );
   }
 
   function AbbreviationSort() {
-    tabledata = readyData
+    tabledata = readyData;
     setAbbreviationSorted(!abbreviationSorted);
-     if (abbreviationSorted == true)
-         tabledata.sort((a,b) => (a.abbreviation > b.abbreviation) ? 1 : ((b.abbreviation > a.abbreviation)) ? -1 : 0)
-     else 
-         tabledata.reverse()
+    if (abbreviationSorted == true)
+      tabledata.sort((a, b) =>
+        a.abbreviation > b.abbreviation ? 1 : b.abbreviation > a.abbreviation ? -1 : 0);
+    else 
+    tabledata.sort((a, b) =>
+        a.abbreviation < b.abbreviation ? 1 : b.abbreviation < a.abbreviation ? -1 : 0);
   }
 
   function ConferenceSort() {
-    tabledata = readyData
+    tabledata = readyData;
     setConferenceSorted(!conferenceSorted);
-     if (conferenceSorted == true)
-         tabledata.sort((a,b) => (a.conference > b.conference) ? 1 : ((b.conference > a.conference)) ? -1 : 0)
-     else 
-         tabledata.reverse()
+    if (conferenceSorted == true)
+      tabledata.sort((a, b) =>
+        a.conference > b.conference ? 1 : b.conference > a.conference ? -1 : 0);
+    else
+    tabledata.sort((a, b) =>
+        a.conference < b.conference ? 1 : b.conference < a.conference ? -1 : 0);
   }
 
   function DivisionSort() {
-    tabledata = readyData
+    tabledata = readyData;
     setDivisionSorted(!divisionSorted);
-     if (divisionSorted == true)
-         tabledata.sort((a,b) => (a.division > b.division) ? 1 : ((b.division > a.division)) ? -1 : 0)
-     else 
-         tabledata.reverse()
+    if (divisionSorted == true)
+      tabledata.sort((a, b) =>
+        a.division > b.division ? 1 : b.division > a.division ? -1 : 0);
+    else
+    tabledata.sort((a, b) =>
+        a.division < b.division ? 1 : b.division < a.division ? -1 : 0);
   }
-
-
 
   return (
     <div>
@@ -84,7 +97,9 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam }) {
         }}
       >
         <input
-          className="searchbox" placeholder="Search team, city, etc." onChange={(e) => setInputQuery(e.target.value)}
+          className="searchbox"
+          placeholder="Search team, city, etc."
+          onChange={(e) => setInputQuery(e.target.value)}
         />
         <AiOutlineSearch size={26} className="search-img" alt="Search" />
       </form>
@@ -101,20 +116,20 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam }) {
             </tr>
           </thead>
           <tbody>
-            {
-              readyData.map((row) => (
-                  //make a handle click that adds a class to it for highlighting, and opens a modal somehow
-                  // pass the team name to the modal, use a hook inside the modal to do second api call
-                  // to the games endpoint and then filter it by the team name
-                <tr onClick={() => HandlePanel(true, row.id, row.full_name, row.name)} className="table-inf">
-                  <td>{row.name}</td>
-                  <td>{row.city}</td>
-                  <td>{row.abbreviation}</td>
-                  <td>{row.conference}</td>
-                  <td>{row.division}</td>
-                </tr>
-              ))
-            }
+            {readyData.map((row) => (
+              //make a handle click that adds a class to it for highlighting, and opens a modal somehow
+              // pass the team name to the modal, use a hook inside the modal to do second api call
+              // to the games endpoint and then filter it by the team name
+              <tr className={row.id == active ? 'active-row' : null }
+                onClick={() => HandlePanel(true, row.id, row.name, row.full_name)}
+              >
+                <td>{row.name}</td>
+                <td>{row.city}</td>
+                <td>{row.abbreviation}</td>
+                <td>{row.conference}</td>
+                <td>{row.division}</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </div>

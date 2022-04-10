@@ -1,35 +1,38 @@
-.team-table{
-    height: 600px;
-    overflow-y: scroll;
-    border-radius: 5px;
+.team-table {
+  height: 600px;
+  overflow-y: scroll;
+  border-radius: 5px;
 }
 
-table{
-    position: relative;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+table {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 !important;
 }
 
-.table-ctg{
-    position: sticky;
-    top: 0;
-    background-color: rgb(18, 47, 134);
-    color: white;
+.table-ctg {
+  position: sticky;
+  top: 0;
+  background-color: rgb(18, 47, 134);
+  color: white;
 }
 
-tr{
-    background-color: rgba(212, 239, 247, 0.826);
-    height: 75px;
-    vertical-align: middle;
+tr {
+  background-color: rgba(212, 239, 247, 0.826);
+  height: 75px;
+  vertical-align: middle;
 }
 
-tr:hover{
-    cursor: pointer;
+.active-row{
+  background-color: rgb(150, 176, 255);
 }
 
-th:hover{
-    color: rgb(118, 217, 250);
+tr:hover {
+  cursor: pointer;
 }
 
-
+th:hover {
+  color: rgb(118, 217, 250);
+}

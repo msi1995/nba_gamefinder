@@ -1,55 +1,93 @@
-span{
-    margin-left: 40px;
-}
-
-.panel-desc span{
-    margin-left: 0px;
-}
-
-.panel-container{
-    position: absolute;
-    top: 0;
-    right: 0;
+@media screen and (max-width: 500px){
+  span{
+    margin-left: 20px !important;
+  }
+  .panel{
     width: 100%;
-}
-
-.panel{
-    background-color: white;
+  }
+  .panel-desc{
     text-align: center;
-    position: fixed;
+  }
 }
 
-.panel-header{
-    display: inline-flex;
-    justify-content: space-between;
-    font-size: 32px;
-    font-weight: 600;
-    width: 100%;
-    min-height: 75px;
-    align-items: center;
-    background-color: rgba(223, 228, 243, 0.951);
+.panel-title{
+  margin-left: 40px;
+  padding: 0;
 }
 
-.panel-info{
-    display: flex;
-    text-align: left;
+span {
+  margin: 15px;
+  margin-right: 50px;
 }
 
-.panel-titles{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.dark-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 1;
 }
 
-.panel-desc{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.panel-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
 
-.closeBtn{
-    margin-right: 20px;
-    background: none;
-    border: none;
-    font-size: 18px;
+.panel {
+  z-index: 2;
+  background-color: white;
+  text-align: center;
+  position: fixed;
+  min-width: 470px;
+}
+
+.panel-header {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 600;
+  width: 100%;
+  min-height: 75px;
+  margin-bottom: 40px;
+  align-items: center;
+  background-color: rgba(219, 218, 218, 0.951);
+}
+
+.panel-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-box{
+  display: flex;
+  margin-left: 20px;
+  width: 65%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.panel-box-sub{
+  display: flex;
+  margin-left: 30px;
+  width: 65%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.panel-box-sub span{
+  font-weight: bold;
+}
+
+.panel-subtitle{
+
+}
+
+.closeBtn {
+  margin-right: 20px;
+  background: none;
+  border: none;
+  font-size: 18px;
 }

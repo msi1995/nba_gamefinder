@@ -1,24 +1,24 @@
-
 body {
   background-image: url(./images/kb.jpg);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,body{
-margin: 0;
-padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-h1{
+h1 {
   color: rgb(0, 0, 0);
   text-shadow: 2px 1px #ffffff;
   padding-bottom: 20px;
@@ -45,7 +45,7 @@ h1{
   background: #555;
 }
 
-.main-c{
+.main-c {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -54,7 +54,7 @@ h1{
   height: 100vh;
 }
 
-.content-c{
+.content-c {
   height: 80%;
   width: 70%;
 }
