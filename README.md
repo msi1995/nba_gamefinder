@@ -24,7 +24,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.
