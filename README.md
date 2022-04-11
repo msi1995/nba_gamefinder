@@ -3,7 +3,7 @@
 
 # Alkira UI Engineer Takehome
 
-To the devs at Alkira who review my implementation, thank you for the opportunity. I included just a few comments in areas of the code that I know may have room for improvement, but I did not want to spend an unrealistic amount of time on the takehome.
+To the devs at Alkira who review my implementation, thank you for the opportunity. I included just a few comments in areas of the code that I know may have room for improvement, but I did not want to spend an unrealistic amount of time on the takehome. I also do not normally use Bootstrap, and realise now that a Datatable would have likely made sorting easier, but I coded it by hand here.
 
 I used a third-party side panel (https://www.npmjs.com/package/react-sliding-side-panel) that ended up not functioning as well as I would have liked. You'll notice a slight delay when closing the sidebar. I tried to fix this for a bit, but wasn't able to find a quick solution.
 
