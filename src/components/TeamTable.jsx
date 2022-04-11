@@ -37,7 +37,7 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
   function TeamSort() {
     tabledata = readyData;
     setTeamSorted(!teamSorted);
-    if (teamSorted == true)
+    if (teamSorted === true)
       tabledata.sort((a, b) =>
         a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
     else
@@ -48,7 +48,7 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
   function CitySort() {
     tabledata = readyData;
     setCitySorted(!citySorted);
-    if (citySorted == true)
+    if (citySorted === true)
       tabledata.sort((a, b) =>
         a.city > b.city ? 1 : b.city > a.city ? -1 : 0
       );
@@ -61,7 +61,7 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
   function AbbreviationSort() {
     tabledata = readyData;
     setAbbreviationSorted(!abbreviationSorted);
-    if (abbreviationSorted == true)
+    if (abbreviationSorted === true)
       tabledata.sort((a, b) =>
         a.abbreviation > b.abbreviation ? 1 : b.abbreviation > a.abbreviation ? -1 : 0);
     else 
@@ -72,7 +72,7 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
   function ConferenceSort() {
     tabledata = readyData;
     setConferenceSorted(!conferenceSorted);
-    if (conferenceSorted == true)
+    if (conferenceSorted === true)
       tabledata.sort((a, b) =>
         a.conference > b.conference ? 1 : b.conference > a.conference ? -1 : 0);
     else
@@ -83,7 +83,7 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
   function DivisionSort() {
     tabledata = readyData;
     setDivisionSorted(!divisionSorted);
-    if (divisionSorted == true)
+    if (divisionSorted === true)
       tabledata.sort((a, b) =>
         a.division > b.division ? 1 : b.division > a.division ? -1 : 0);
     else
@@ -124,7 +124,7 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
               //make a handle click that adds a class to it for highlighting, and opens a modal somehow
               // pass the team name to the modal, use a hook inside the modal to do second api call
               // to the games endpoint and then filter it by the team name
-              <tr className={row.id == active ? 'active-row' : null }
+              <tr id="dyn-row" className={row.id === active ? 'active-row' : null }
                 onClick={() => HandlePanel(true, row.id, row.name, row.full_name)}
               >
                 <td>{row.name}</td>

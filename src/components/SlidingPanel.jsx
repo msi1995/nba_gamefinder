@@ -41,7 +41,7 @@ export default function SlidePanel({ isOpen, team, setActive }) {
               </div>
               <div className="panel-box">
                 <span>Total Games in 2021</span>
-                <span>{Object.keys(gameData).length}</span>
+                <span id="api-check">{Object.keys(gameData).length}</span>
               </div>
               <div className="panel-box">
                 <span className="panel-subtitle">
