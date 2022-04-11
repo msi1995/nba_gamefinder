@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import FetchTeams from "../hooks/FetchTeams";
-import FetchGames from "../hooks/FetchGames";
 import TeamTable from "../components/TeamTable";
 import SlidePanel from "../components/SlidingPanel";
 
