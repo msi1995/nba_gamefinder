@@ -9,7 +9,7 @@ I used a third-party side panel (https://www.npmjs.com/package/react-sliding-sid
 
 I added a bit of extra flair to the design, such as a scroll for the table instead of pages, as well as some loading indicators for data retrieval for the side panel -- hopefully this is okay.
 
-Finally, I added some very basic Cypress tests to ensure the dynamically generated rows in the table and the side panel exist (the api is working). I have never used Cypress before, so I didn't go too in depth with testing; it's a tool I would need to learn more.
+Finally, I added some very basic Cypress tests to ensure the dynamically generated rows in the table and the side panel exist (the api is working). I have never used Cypress; I imagine there are better ways to do this like mocking the response and seeing how it is handled. It's something I'd need to learn more about.
 
 Run the tests with npm test.
 
