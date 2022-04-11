@@ -39,6 +39,9 @@ export default function TeamTable({ tabledata, setOpenPanel, setPanelTeam, activ
     setTeamSorted(!teamSorted);
     if (teamSorted === true)
       tabledata.sort((a, b) =>
+      // if a.name is greater than b.name, return 1 (put b before a, b comes first), 
+      // if b.name is greater than a.name, return -1 (put a before b, a comes first),
+      // return 0 otherwise (do nothing) since they are equal
         a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
     else
       tabledata.sort((a, b) =>

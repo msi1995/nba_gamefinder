@@ -1,9 +1,11 @@
 @media screen and (max-width: 500px){
   span{
     margin-left: 20px !important;
+    font-size: 12px;
+    margin: 10px 0px !important;
   }
   .panel{
-    width: 100%;
+    min-width: 300px !important;
   }
   .panel-desc{
     text-align: center;
