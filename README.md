@@ -3,13 +3,13 @@
 
 # Alkira UI Engineer Takehome
 
-To the devs at Alkira who review my implementation, thank you for the opportunity. I included just a few comments in areas of the code that I know may have room for improvement, but I did not want to spend an unrealistic amount of time on the takehome.
+To the devs at Alkira who review my implementation, thank you for the opportunity. I included just a few comments in areas of the code that I know may have room for improvement, but I did not want to spend an unrealistic amount of time on the takehome. I'm fairly new to Bootstrap, and realise now that a Datatable would have likely made sorting easier, but I coded the sorting by hand here.
 
 I used a third-party side panel (https://www.npmjs.com/package/react-sliding-side-panel) that ended up not functioning as well as I would have liked. You'll notice a slight delay when closing the sidebar. I tried to fix this for a bit, but wasn't able to find a quick solution.
 
-I added a bit of extra flair to the design, as well as some loading indicators for data retrieval for the side panel -- hopefully this is okay.
+I added a bit of extra flair to the design, such as a scroll for the table instead of pages, as well as some loading indicators for data retrieval for the side panel -- hopefully this is okay.
 
-Finally, I added some very basic Cypress tests to ensure the dynamically generated rows in the table and the side panel exist (the api is working). I have never used Cypress before, so I didn't go too in depth with testing; it's a tool I would need to learn more.
+Finally, I added some very basic Cypress tests to check that dynamically generated rows in the table and the side panel exist after API call. I have never used Cypress; I imagine there are better ways to do this like mocking the response and seeing how it is handled (i saw something about cy.intercept()). It's something I'd need to learn more about.
 
 Run the tests with npm test.
 
@@ -24,7 +24,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.
